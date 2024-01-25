@@ -1,0 +1,31 @@
+.header {
+  padding-bottom: var(--size-md);
+  border-bottom: 1px solid var(--lightGray);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.greetings {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.date {
+  color: var(--opaque-black);
+}
+
+@media (min-width: 798px) {
+  .header {
+    margin: var(--size-md) var(--size-xl) 0px var(--size-2xl);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8;
+  }
+
+  .greetings {
+    font-size: var(--size-md);
+  }
+}
