@@ -1,13 +1,7 @@
 'use client';
 import { initialTasks } from '@/constants/initialTasks';
 import { Task } from '@/types/Task';
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import { createContext, ReactNode, useContext, useState } from 'react';
 import { v4 } from 'uuid';
 
 interface TasksProviderProps {
@@ -27,17 +21,8 @@ const TasksContext = createContext<TasksContextProps>({
   updateTaskStatus: () => {},
   tasks: initialTasks,
 });
-const localStorageKey = 'tasks';
-
 const TasksProvider = ({ children }: TasksProviderProps) => {
-  const storedTasks = JSON.parse(localStorage.getItem(localStorageKey) || '[]');
-  const [tasks, setTasks] = useState<Task[]>(
-    storedTasks.length > 0 ? storedTasks : initialTasks,
-  );
-
-  useEffect(() => {
-    localStorage.setItem(localStorageKey, JSON.stringify(tasks));
-  }, [tasks]);
+  const [tasks, setTasks] = useState(initialTasks);
 
   const createTask = (description: string) => {
     setTasks((prevTasks) => [
