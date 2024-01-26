@@ -1,0 +1,63 @@
+.taskItem {
+  width: 100%;
+  display: flex;
+  border: 1px dashed var(--light-gray);
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-sm);
+  padding: var(--size-sm);
+  border-radius: var(--rounded-sm);
+}
+
+.taskItem label {
+  cursor: pointer;
+}
+
+.taskName {
+  flex: 1;
+}
+
+.taskItem:hover {
+  background-color: var(--extraLight-blue);
+  border-color: var(--extraLight-blue);
+}
+.customCheckbox input[type='checkbox'] {
+  display: none; /* Esconde o input checkbox padrão */
+}
+
+.customCheckbox .checkboxLabel {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--white);
+  border: var(--border-lightGray);
+  cursor: pointer;
+  position: relative;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.customCheckbox input[type='checkbox']:checked + .checkboxLabel {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #a0dcf6;
+  border: 1px solid var(--dark-blue);
+  cursor: pointer;
+  position: relative;
+}
+
+.customCheckbox input[type='checkbox']:checked + .checkboxLabel::before {
+  content: url('/assets/Icon.svg');
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.removeButton {
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  cursor: pointer;
+}
