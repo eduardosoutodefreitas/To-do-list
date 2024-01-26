@@ -4,7 +4,11 @@ import './globals.css';
 import Header from './components/Header/header';
 import AppProvider from '@/providers/AppProvider';
 
-const inter = Inter_Tight({ subsets: ['latin'], weight: ['400', '500'] });
+const inter = Inter_Tight({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-inter_tight',
+});
 
 export const metadata: Metadata = {
   title: 'FocalPoint to-do list',
