@@ -1,0 +1,22 @@
+.customButton {
+  padding: 16px 24px;
+  text-align: center;
+  border-radius: var(--rounded-sm);
+  cursor: pointer;
+  width: 100%;
+}
+.default {
+  background: var(--blue-gradient);
+  color: var(--white);
+  font-weight: 500;
+}
+.danger {
+  background: var(--red-gradient);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.cancel {
+  background-color: var(--veryLight-blue);
+  color: var(--black);
+}
