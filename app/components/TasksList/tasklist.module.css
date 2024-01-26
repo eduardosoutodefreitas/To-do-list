@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: var(--size-md);
   border: var(--border-lightGray);
   padding: var(--size-md);
   border-radius: var(--rounded-md);
@@ -21,6 +21,7 @@
 @media (min-width: 798px) {
   .taskListContainer {
     padding: var(--size-lg);
+    margin-top: 40px;
   }
 
   .tasksList {
