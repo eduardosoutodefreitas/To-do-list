@@ -1,0 +1,35 @@
+.modalOverlay {
+  display: none;
+}
+
+.modalContainer {
+  z-index: 50;
+  padding: var(--size-md);
+  background-color: var(--white);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  inset: 0;
+}
+@media (min-width: 798px) {
+  .modalOverlay {
+    z-index: 10;
+    display: inline-block;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    inset: 0;
+    cursor: pointer;
+    background-color: var(--opaque-white);
+  }
+  .modalContainer {
+    max-width: 450px;
+    left: 50%;
+    top: 50%;
+    height: min-content;
+    padding: var(--size-lg);
+    transform: translate(-50%, -50%);
+    box-shadow: var(--modal-shadow);
+    border-radius: var(--rounded-md);
+  }
+}
