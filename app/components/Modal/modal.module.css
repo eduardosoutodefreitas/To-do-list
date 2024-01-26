@@ -21,6 +21,7 @@
     inset: 0;
     cursor: pointer;
     background-color: var(--opaque-white);
+    backdrop-filter: blur(2.5px);
   }
   .modalContainer {
     max-width: 450px;
