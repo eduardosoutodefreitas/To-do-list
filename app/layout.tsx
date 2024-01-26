@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter_Tight } from 'next/font/google';
 import './globals.css';
 import Header from './components/Header/header';
+import AppProvider from '@/providers/AppProvider';
 
 const inter = Inter_Tight({ subsets: ['latin'], weight: ['400', '500'] });
 
@@ -19,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
+        <AppProvider>
+          <Header />
+          {children}
+        </AppProvider>
       </body>
     </html>
   );
