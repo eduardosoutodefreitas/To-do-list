@@ -4,9 +4,12 @@
   --opaque-black: rgba(0, 0, 0, 0.54);
   --border-radius: 12px;
   --opaque-white: rgba(255, 255, 255, 0.8);
-  --lightGray: #d7dde9;
+  --light-gray: #d7dde9;
   --dark-blue: #0796d3;
   --light-blue: #53c0f0;
+  --gray-blue: #b0bbd1;
+  --veryLight-blue: #e7eefb;
+  --extraLight-blue: #f7f9fd;
   --dark-red: #d30707;
   --light-red: #f05353;
   --rounded-md: 16px;
@@ -16,6 +19,7 @@
   --size-lg: 32px;
   --size-md: 24px;
   --size-sm: 16px;
+  --size-xs: 8px;
   --blue-gradient: linear-gradient(
     90deg,
     var(--dark-blue) 0%,
@@ -26,6 +30,8 @@
     var(--dark-red) 0%,
     var(--light-red) 68.65%
   );
+  --modal-shadow: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+  --border-lightGray: 1px solid var(--light-gray);
 }
 
 * {
@@ -51,8 +57,37 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+.modalContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-lg);
+}
+
+.modalContentTitle {
+  font-size: var(--size-md);
+  font-weight: 500;
+}
+
+.modalButtonsContainer {
+  display: flex;
+  gap: var(--size-sm);
+  flex-direction: column-reverse;
+}
+
 @media (min-width: 798px) {
   body {
     padding: 0px;
+  }
+  .modalButtonsContainer {
+    flex-direction: row;
   }
 }
