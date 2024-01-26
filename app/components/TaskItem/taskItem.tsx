@@ -9,7 +9,10 @@ const TaskItem = ({ task }: TaskItemProps) => {
   return (
     <li className={styles.taskItem}>
       <TaskCheckbox isCompleted={task.completed} taskId={task.id} />
-      <label htmlFor={task.id} className={styles.taskName}>
+      <label
+        htmlFor={task.id}
+        className={`${styles.taskName} ${task.completed ? styles.completedTaskName : ''}`}
+      >
         {task.description}
       </label>
       <TaskItemRemoveButton taskId={task.id} />
