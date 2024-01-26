@@ -1,0 +1,29 @@
+.newTaskForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-lg);
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xs);
+}
+.newTaskLabel {
+  color: var(--black);
+}
+
+.taskInput {
+  border-radius: var(--rounded-sm);
+  border: var(--border-lightGray);
+  padding: var(--size-sm);
+}
+
+.taskInput::placeholder {
+  color: var(--opaque-black);
+}
+
+.errorMessage {
+  font-size: 14px;
+  color: var(--light-red);
+}
